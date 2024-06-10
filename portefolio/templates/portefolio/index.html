@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfólio Rodrigo Dias</title>
+    <link rel="stylesheet" type="text/css" href="/static/portefolio/style.css">
+    <link rel="icon" type="image/png" href="/static/portefolio/imgs/briefcase.png">
+</head>
+<body>
+    <header>
+        <div>
+            <h1>Portfólio</h1>
+            <nav>
+                <ul>
+                    <li><a href="#sobre">Sobre</a></li>
+                    <li><a href="#projetos">Projetos</a></li>
+                    <li><a href="#contato">Contacto</a></li>
+                    <li><a href="#about-this-website">WebTools</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section id="menu" class="section">
+        <div class="container">
+            <div class="menu-content">
+                <img src="/static/portefolio/imgs/0.png" alt="perfil">
+                <h3>Bem-Vindo</h3>
+            </div>
+            <div>
+                <div id="clock-container">
+                    <div id="clock"></div>
+                    <img id="weatherIcon" src="" alt="Weather Icon">
+                </div>
+
+                <button id="dark-mode-toggle">Toggle Dark Mode</button>
+            </div>
+        </div>
+    </section>
+
+    <section id="sobre" class="section">
+        <div class="container">
+            <h2>Sobre Mim</h2>
+            <div class="about-me">
+                <img src="/static/portefolio/imgs/perfil1.png" alt="perfil">
+                <h3>Rodrigo Dias</h3>
+                <br><br>
+                <p>
+                    Bem-vindo ao meu portfólio digital. O meu nome é Rodrigo Dias,
+                    tenho 19 anos e sou natural de Lisboa. Atualmente, estou no 2º ano
+                    da graduação em Engenharia de Informática. Com uma média de 16, tenho
+                    procurado constantemente desafios e oportunidades para expandir o meu nível
+                    acadêmico e profissional.
+                </p>
+                <p>
+                    A programação é uma realidade recente na minha vida.
+                </p>
+                <p>
+                    Durante o meu ensino médio, escolhi uma disciplina de Filosofia em vez da disciplina de Aplicações e TI.
+                    Isso ofereceu-me não apenas uma compreensão mais profunda das questões fundamentais da existência humana,
+                    mas também desenvolveu a minha capacidade de pensamento crítico e análise. Ao mergulhar nos debates sobre ética e
+                    lógica, eu descobri uma paixão por desafios intelectuais e resolução de problemas complexos. Essa experiência despertou
+                    o interesse por lógica e raciocínio estruturado em mim, levando-me a explorar ainda mais o vasto mundo da tecnologia
+                    e da computação. Optei então por seguir Engenharia Informática na faculdade, onde posso não só aplicar essas habilidades
+                    analíticas e de pensamento crítico, mas também aprofundar na arte de programar, transformando conceitos abstratos
+                    em soluções concretas e inovadoras para os desafios do mundo moderno.
+                </p>
+                <p>
+                    Hoje vejo a programação como um mundo onde o único limite é a imaginação humana, e com menos ou mais desafios, tudo é possível.
+                </p>
+                <p>
+                    No meu tempo livre sempre gostei muito de ouvir música enquanto construía sets de Legos, ou então a treinar polo-aquático que
+                    foi o desporto pelo qual me apaixonei e que infelizmente tive de parar este ano.
+                </p>
+                <br>
+            </div>
+            <div class="skills-interests">
+                <div class="skills">
+                    <h3>Hard Skills</h3>
+                    <ul>
+                        <li>Java <span class="stars">★★★★★</span></li>
+                        <li>Python <span class="stars">★★★☆☆</span></li>
+                        <li>Kotlin <span class="stars">★★★★☆</span></li>
+                        <li>JavaScript <span class="stars">★★★☆☆</span></li>
+                        <li>C & C++<span class="stars">★★★★☆</span></li>
+                        <li>HTML & CSS <span class="stars">★★★★☆</span></li>
+                    </ul>
+                </div>
+                <div class="interests">
+                    <img src="/static/portefolio/imgs/polo1.JPG" alt="Hobbies">
+                </div>
+                <div class="interests">
+                    <h3>Hobbies & Interesses</h3>
+                    <ul>
+                        <li>Polo-Aquático</li>
+                        <li>F1</li>
+                        <li>Programação</li>
+                        <li>Legos</li>
+                        <li>Jogos de tabuleiro</li>
+                        <li>Música</li>
+                    </ul>
+                </div>
+                <div class="interests">
+                    <img src="/static/portefolio/imgs/polo2.JPG" alt="Hobbies">
+                </div>
+                <div class="skills">
+                    <h3>Soft Skills</h3>
+                    <ul>
+                        <li>Comunicação <span class="stars">★★★☆☆</span></li>
+                        <li>Trabalho em Equipa <span class="stars">★★★★☆</span></li>
+                        <li>Resiliência <span class="stars">★★★★☆</span></li>
+                        <li>Adaptabilidade <span class="stars">★★☆☆☆</span></li>
+                        <li>Criatividade <span class="stars">★★★★★</span></li>
+                        <li>Resuloção de Problemas <span class="stars">★★★★☆</span></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="projetos" class="section">
+        <div class="container">
+            <h2>Projetos</h2>
+            <br>
+            <div class="projects-grid">
+                <div class="project">
+
+                    <a href="{% url 'bandas:index' %}">
+                        <div class="project-image">
+                            <img src="/static/portefolio/imgs/bandas.png" alt="Projeto 1">
+                        </div>
+                        <div class="project-info">
+                            <h3>Aplicação Bandas</h3>
+                            <p>
+                                O nome da aplicação é Spotily. Esta aplicação permite visualizar bandas, álbuns e músicas.
+                                A aplicação tem também uma área de gestão para utilizadores autorizados gerirem as base de dados (criar, modificar ou apagar registos).
+                            </p>
+                        </div>
+
+                    </a>
+                </div>
+                <div class="project">
+                    <a href="{% url 'meteo:index' %}">
+                        <div class="project-image">
+                            <img src="/static/portefolio/imgs/meteo.png" alt="Projeto 2">
+                        </div>
+                        <div class="project-info">
+                            <h3>Aplicação Meteorologia</h3>
+                            <p>
+                                O nome da aplicação é Radar do Tempo. Esta aplicação permite visualizar os dados meteorológicos das localidades de Portugal.
+                            </p>
+                        </div>
+                    </a>
+                </div>
+
+                <div class="project">
+                    <a href="{% url 'curso:universidade' %}">
+                        <div class="project-image">
+                            <img src="/static/portefolio/imgs/curso.png" alt="Projeto 2">
+                        </div>
+                        <div class="project-info">
+                            <h3>Aplicação Curso</h3>
+                            <p>
+                                O nome da aplicação é Universidade. Esta aplicação permite visualizar os dados dos cursos de LEI e LIG da faculdade Lusófona de Lisboa.
+                                Dados referentes aos cursos, disciplinas, e projetos.
+                            </p>
+                        </div>
+                    </a>
+                </div>
+                <div class="project">
+                    <a href="{% url 'artigos:artigos' %}">
+                        <div class="project-image">
+                            <img src="/static/portefolio/imgs/artigo.png" alt="Projeto 2">
+                        </div>
+                        <div class="project-info">
+                            <h3>Aplicação Artigos</h3>
+                            <p>
+                                O nome da aplicação é Observa. É um site de notícias e publicações.
+                                Podemos pesquisar notícias por tema, visualizar perfis de utilizadores e visualizar páginas dos artigos.
+                            </p>
+                        </div>
+                    </a>
+                </div>
+                <div class="project">
+                    <a href="{% url 'calculadora:index' %}">
+                        <div class="project-image">
+                            <img src="/static/portefolio/imgs/calculadora.png" alt="Projeto 2">
+                        </div>
+                        <div class="project-info">
+                            <h3>Aplicação Calculadora</h3>
+                            <p>
+                                Uma calculadora simples, visualmente apelativa e fácil de usar
+                            </p>
+                        </div>
+                    </a>
+                </div>
+                <div class="project">
+                    <div class="project-image">
+                        <img src="/static/portefolio/imgs/BJ.png" alt="Projeto 2">
+                    </div>
+                    <div class="project-info">
+                        <h3>Site BlackJack</h3>
+                        <p>
+                            Um site para experimentar um dos maiores jogos de cartas do mundo
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="about-this-website" class="section">
+        <div class="container">
+            <h2>Sobre este Website</h2>
+            <br>
+            <div class="website-info">
+                <div class="info-box">
+                    <a href="https://youtu.be/ahgIMwQeZsg">
+                        <img src="/static/portefolio/imgs/icon1.png" alt="Ícone 1">
+                    </a>
+                    <br>
+                    <h3>Django hands-on</h3>
+                </div>
+                <div class="info-box">
+                    <a href="https://youtu.be/tFzyRin4iCY">
+                    <img src="/static/portefolio/imgs/icon2.png" alt="Ícone 2">
+                    </a>
+                    <br>
+                    <h3>Visita Guiada</h3>
+                </div>
+                <div class="info-box">
+                    <img src="/static/portefolio/imgs/icon3.png" alt="Ícone 3">
+                    <br>
+                    <h3>Automação</h3>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contato" class="section">
+        <div class="container">
+            <h2>Contacto</h2>
+            <p>Entre em contato comigo através do email: <a href="mailto:rodrigo.dias.2004@gmail.com">rodrigo.dias.2004@gmail.com</a></p>
+            <div class="social-icons">
+                <a href="https://github.com/Rodrigo-Dias-a22205897" target="_blank"><img src="/static/portefolio/imgs/github-sign.png"></a>
+                <a href="https://www.linkedin.com/in/rodrigo-dias3/" target="_blank"><img src="/static/portefolio/imgs/linkedin.png"></a>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div>
+            <p>&copy; 2024 Rodrigo Dias. Todos os direitos reservados.</p>
+        </div>
+    </footer>
+    <script src="/static/portefolio/script.js"></script>
+</body>
+</html>

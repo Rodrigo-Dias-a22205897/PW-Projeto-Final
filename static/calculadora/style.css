@@ -1,0 +1,104 @@
+body {
+    margin: 0px;
+    padding: 0px;
+    font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+    font-size: medium;
+    background: #393e46;
+    height: 100%;
+}
+
+header{
+    top: 0;
+    width: 100%;
+    position:absolute;
+    background:#fed028;
+}
+
+nav {
+    padding: 10px;
+    width: fit-content;
+}
+
+nav a{
+    padding:10px;
+    text-decoration: none;
+    color: black;
+}
+
+footer{
+    position:absolute;
+    bottom:0;
+}
+
+ul li{
+    margin: 20px;
+}
+
+
+.txt-1{
+    color:rgb(0, 162, 255);
+}
+
+.txt-2{
+    margin: 10px;
+    color:black;
+}
+
+.txt-3{
+    color:#ecfffb;
+}
+
+.txt-4{
+    color: #28d7fe;
+    margin:5px;
+}
+
+main{
+    position:absolute;
+    top:20%;
+    left:50%;
+    transform: translate(-50%);
+    text-align: center;
+}
+
+.calculator{
+    margin:15px;
+    position: absolute;
+    background-color: black;
+    border-radius: 15px;
+    padding: 15px;
+    width: 250px;
+    color: white;
+    left:15%;
+}
+
+.button{
+    width: 52px;
+    height: 52px;
+    font-size: 20px;
+    cursor: pointer;
+    margin: 3px;
+    background-color: rgb(31, 31, 31);
+    border: none;
+    color: white;
+}
+
+.button:hover{
+    background-color: black;
+}
+
+.buttonEqual{
+    height: 106px;
+}
+
+#result{
+    width: 91%;
+    height: 30px;
+    margin: 5px;
+    background-color: white;
+    color: black;
+    font-size: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: right;
+    padding: 5px;
+}

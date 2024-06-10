@@ -1,0 +1,52 @@
+{% extends "artigos/layout.html" %}
+
+{% block content %}
+    <div class="content-artigo">
+        <h1 class="">{{ artigo.titulo }}</h1>
+
+        <div>
+            <img class="artigo-img" src="{{ artigo.foto.url }}" alt="{{ artigo.autor }}">
+            <br>
+            <p>{{ artigo.texto }}</p>
+            <br>
+            <p>{{ artigo.autor }}</p>
+            <a href="{% url 'artigos:autor' artigo.autor.nome %}">
+                <img class="autor-img" src="{{ artigo.autor.foto.url }}" alt="{{ artigo.autor }}">
+                <p>{{ artigo.data }}</p>
+            </a>
+            <br><br>
+        </div>
+
+        <div class="div-comentarios">
+            {% if artigo.comentarios.count == 0 %}
+                <p>Este artigo ainda não tem comentários.</p>
+                <br>
+            {% else %}
+                {% for comentario in artigo.comentarios.all %}
+                    <h2>Comentário:</h2>
+                    <div>
+                        <h3>{{ comentario.autor }}</h3>
+                        <p>{{ comentario.texto }}</p>
+                        <br>
+                    </div>
+                    <div class="respostas">
+                        <h2>Respostas:</h2>
+
+                        {% if comentario.respostas.count == 0 %}
+                            <p>Este comentário não tem respostas.</p>
+                            <br>
+                        {% else %}
+                            {% for resposta in comentario.respostas.all %}
+
+                                    <h4>{{ resposta.autor }}</h4>
+                                    <p>{{ resposta.texto }}</p>
+                                    <br>
+
+                            {% endfor %}
+                        {% endif %}
+                    </div>
+                {% endfor %}
+            {% endif %}
+        </div>
+    </div>
+{% endblock %}

@@ -1,0 +1,53 @@
+[
+    {
+        "nome": "The Rolling Stones",
+        "anoCriacao": 1962,
+        "descricao": "Os Rolling Stones são uma banda de rock britânica formada em Londres em 1962, considerada uma das maiores e mais bem-sucedidas bandas de rock de todos os tempos."
+    },
+    {
+        "nome": "Led Zeppelin",
+        "anoCriacao": 1968,
+        "descricao": "Led Zeppelin foi uma banda britânica de rock formada em Londres em 1968. Composta por Jimmy Page, Robert Plant, John Paul Jones e John Bonham, é considerada uma das maiores bandas de rock de todos os tempos."
+    },
+    {
+        "nome": "Pink Floyd",
+        "anoCriacao": 1965,
+        "descricao": "Pink Floyd foi uma banda britânica de rock progressivo formada em Londres em 1965, que alcançou grande sucesso com sua música psicodélica e letras filosóficas."
+    },
+    {
+        "nome": "Queen",
+        "anoCriacao": 1970,
+        "descricao": "Queen foi uma banda britânica de rock formada em Londres em 1970, conhecida por suas músicas distintas, performances ao vivo espetaculares e composições complexas."
+    },
+    {
+        "nome": "The Beatles",
+        "anoCriacao": 1960,
+        "descricao": "The Beatles foi uma banda de rock britânica formada em Liverpool em 1960. É uma das bandas mais influentes e comercialmente bem-sucedidas da história da música popular."
+    },
+    {
+        "nome": "AC/DC",
+        "anoCriacao": 1973,
+        "descricao": "AC/DC é uma banda de rock australiana formada em Sydney em 1973 pelos irmãos Angus e Malcolm Young. É conhecida por seu estilo de hard rock e performances energéticas."
+    },
+    {
+        "nome": "Guns N' Roses",
+        "anoCriacao": 1985,
+        "descricao": "Guns N' Roses é uma banda americana de hard rock formada em Los Angeles em 1985. Com seu álbum de estreia 'Appetite for Destruction', tornou-se uma das bandas mais bem-sucedidas dos anos 80 e 90."
+    },
+    {
+        "nome": "The Who",
+        "anoCriacao": 1964,
+        "descricao": "The Who é uma banda britânica de rock formada em Londres em 1964, conhecida por suas performances energéticas no palco e por suas letras introspectivas e filosóficas."
+    },
+    {
+        "nome": "Black Sabbath",
+        "anoCriacao": 1968,
+        "descricao": "Black Sabbath foi uma banda britânica de heavy metal formada em Birmingham em 1968. É frequentemente citada como uma das primeiras bandas de heavy metal e uma influência significativa no gênero."
+    },
+    {
+        "nome": "Deep Purple",
+        "anoCriacao": 1968,
+        "descricao": "Deep Purple é uma banda britânica de rock formada em Hertford, Hertfordshire, em 1968. É considerada uma das pioneiras do hard rock e do heavy metal moderno."
+    }
+]
+

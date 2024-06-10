@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>InfiniteFortune</title>
+    <style>
+        *{
+            margin: 0px;
+            padding: 0px;
+        }
+
+        body{
+            overflow: hidden;
+        }
+
+        .BackGround{
+            background: rgb(2,0,36);
+            background: radial-gradient(circle, rgba(0,212,255,1) 0%, rgba(9,9,121,1) 55%, rgba(2,0,36,1) 100%);
+            color:rgba(172, 255, 47, 0.7);
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            text-align: center;
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 25px;
+        }
+
+        .header {
+            background: rgb(233,223,40);
+            background: linear-gradient(0deg, rgba(233,223,40,1) 0%, rgba(156,88,17,1) 100%);
+            color: rgba(2,0,36,1);
+            font-size: 20px;
+            font-family: Arial, Helvetica, sans-serif;
+            padding: 10px;
+            justify-content: space-between;
+            align-items: center;
+            position: absolute;
+            width: 100%;
+            height: 10%;
+        }
+
+        .logo {
+            position: absolute;
+            height: 80%;
+            width: 8%;
+            left: 1%;
+        }
+
+        #logo-image{
+            height: 100%;
+        }
+
+        #logo-image2{
+            height: 50%;
+            position: absolute;
+            left: 35%;
+        }
+
+        .site-name {
+            color: rgba(2,0,36,1);
+            font-size: 20px;
+            font-family: Arial, Helvetica, sans-serif;
+            position: absolute;
+            left: 7%;
+            height: auto;
+            width: auto;
+            top: 26%;
+        }
+
+        .options {
+            position: absolute;
+            height: 80%;
+            width: 8%;
+            left: 90%;
+            top: 25%;
+        }
+
+        #options-button {
+            background-color: rgba(2,0,36,1);
+            color: rgba(0,212,255,0.9);
+            padding: 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            text-align: center;
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: medium;
+        }
+
+        #options-div {
+            display: none;
+            background: rgb(14,14,181);
+            background: linear-gradient(339deg, rgba(0,212,255,0.8) 0%, rgba(253,223,45,1) 100%);
+            color: rgba(0,212,255,0.9);
+            box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+            position: absolute;
+            z-index: 1;
+            top: 120%;
+            right: 32%;
+        }
+
+        .option {
+            padding: 12px;
+            text-decoration: none;
+            display: block;
+            color: rgba(2,0,36,1);
+        }
+
+        .log {
+            width: 50%;
+            height: 50%;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%,-50%);
+        }
+
+        .button {
+            appearance: none;
+            background-color: rgba(2,0,36,1);
+            border-radius: 15px;
+            box-sizing: border-box;
+            color: #FFFFFF;
+            cursor: pointer;
+            display: inline-block;
+            font-family: Roobert,-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol";
+            font-size: 16px;
+            font-weight: 600;
+            line-height: normal;
+            margin: 0;
+            outline: none;
+            padding: 16px 24px;
+            text-align: center;
+            text-decoration: none;
+            transition: all 300ms cubic-bezier(.23, 1, 0.32, 1);
+            user-select: none;
+            -webkit-user-select: none;
+            touch-action: manipulation;
+            will-change: transform;
+        }
+
+        .button:disabled {
+            pointer-events: none;
+        }
+
+        .button:hover {
+            box-shadow: rgba(0, 0, 0, 0.25) 0 8px 15px;
+            transform: translateY(-2px);
+        }
+
+        .button:active {
+            box-shadow: none;
+            transform: translateY(0);
+        }
+
+        #button1 {
+            width: 15%;
+            height: 15%;
+            position: absolute;
+            top: 80%;
+            left: 30%;
+        }
+
+        #button2 {
+            width: 15%;
+            height: 15%;
+            position: absolute;
+            top: 80%;
+            left: 50%;
+        }
+    </style>
+    <script>
+        function toggleOptions() {
+            var optionsDiv = document.getElementById("options-div");
+            if (optionsDiv.style.display === "block") {
+                optionsDiv.style.display = "none";
+            } else {
+                optionsDiv.style.display = "block";
+            }
+        }
+    </script>
+</head>
+<body>
+    <div class="BackGround">
+    </div>
+
+    <div class="header">
+        <div class="logo">
+            <a href="{% url 'login:index' %}">
+            <img id="logo-image" src="{{ objeto.imagem.url }}">
+            </a>
+
+        </div>
+
+        <div class="site-name">
+            <h1>InfiniteFortune</h1>
+        </div>
+
+        <div class="options">
+            <button id="options-button" onclick="toggleOptions()">Options</button>
+            <div id="options-div">
+                <a href="#" class="option">About Us</a>
+                <a href="#" class="option">Gambling</a>
+                <a href="#" class="option">Questions</a>
+            </div>
+
+        </div>
+
+    </div>
+
+    <div class="log">
+        <img id="logo-image2" src="{{ objeto.imagem.url }}">
+        <a href="{% url 'login:login' %}">
+            <button id="button1" class="button">Login</button>
+        </a>
+        <a href="{% url 'login:register' %}">
+            <button id="button2" class="button">Register</button>
+        </a>
+    </div>
+
+
+</body>
+</html>

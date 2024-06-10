@@ -1,0 +1,245 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>InfiniteFortune</title>
+    <style>
+        *{
+            margin: 0px;
+            padding: 0px;
+        }
+
+        body{
+            overflow: hidden;
+        }
+
+        .BackGround{
+            background: rgb(2,0,36);
+            background: radial-gradient(circle, rgba(0,212,255,1) 0%, rgba(9,9,121,1) 55%, rgba(2,0,36,1) 100%);
+            color:rgba(172, 255, 47, 0.7);
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            text-align: center;
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 25px;
+        }
+
+        .header {
+            background: rgb(233,223,40);
+            background: linear-gradient(0deg, rgba(233,223,40,1) 0%, rgba(156,88,17,1) 100%);
+            color: rgba(2,0,36,1);
+            font-size: 20px;
+            font-family: Arial, Helvetica, sans-serif;
+            padding: 10px;
+            justify-content: space-between;
+            align-items: center;
+            position: absolute;
+            width: 100%;
+            height: 10%;
+        }
+
+        .logo {
+            position: absolute;
+            height: 80%;
+            width: 8%;
+            left: 1%;
+        }
+
+        #logo-image{
+            height: 100%;
+        }
+
+        #logo-image2{
+            height: 50%;
+            position: absolute;
+            left: 35%;
+        }
+
+        .site-name {
+            color: rgba(2,0,36,1);
+            font-size: 20px;
+            font-family: Arial, Helvetica, sans-serif;
+            position: absolute;
+            left: 7%;
+            height: auto;
+            width: auto;
+            top: 26%;
+        }
+
+        .options {
+            position: absolute;
+            height: 80%;
+            width: 8%;
+            left: 90%;
+            top: 25%;
+        }
+
+        #options-button {
+            background-color: rgba(2,0,36,1);
+            color: rgba(0,212,255,0.9);
+            padding: 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            text-align: center;
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: medium;
+        }
+
+        #options-div {
+            display: none;
+            background: rgb(14,14,181);
+            background: linear-gradient(339deg, rgba(0,212,255,0.8) 0%, rgba(253,223,45,1) 100%);
+            color: rgba(0,212,255,0.9);
+            box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+            position: absolute;
+            z-index: 1;
+            top: 120%;
+            right: 32%;
+        }
+
+        .option {
+            padding: 12px;
+            text-decoration: none;
+            display: block;
+            color: rgba(2,0,36,1);
+        }
+
+        .form-login {
+            color: white;
+            font-size: 15px;
+            text-align: left;
+            height: 50%;
+            width: 90%;
+            position: absolute;
+        }
+
+        input{
+            background-color: #949494;
+            width: 95%;
+            height: 25px;
+            margin-top: 5px;
+            border-radius: 5px;
+            padding: 5px;
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 15px;
+        }
+
+        #signIn{
+            background-color: rgba(233,223,40,10.8);
+            width: 100%;
+            height: 30px;
+            margin-top: 5px;
+            border-radius: 5px;
+            padding: 5px;
+        }
+
+        .login-text{
+            color: white;
+            height: 20%;
+            width: 90%;
+            top: 94%;
+            position: absolute;
+            font-size: 15px;
+            font-family: Arial, Helvetica, sans-serif;
+            text-align: left;
+        }
+
+        .Register{
+            background-color: rgba(2,0,36,1);
+            color: rgba(0,212,255,0.9);
+            position: absolute;
+            width: 20%;
+            height: 65%;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%,-50%);
+            text-align: center;
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 20px;
+            margin: 3px;
+            border-radius: 10px;
+            padding: 15px;
+        }
+
+        .msg-error{
+            background-color: crimson;
+            color: black;
+            width: 20%;
+            height: 20%;
+            text-align: center;
+            position: absolute;
+            top: 50%;
+            left: 10%;
+            display: none;
+        }
+    </style>
+    <script src="script.js"></script>
+</head>
+<body>
+    <div class="BackGround">
+    </div>
+
+    <div class="header">
+        <div class="logo">
+            <a href="{% url 'login:index' %}">
+                <img   id="logo-image" src="{{ objeto.imagem.url }}">
+            </a>
+        </div>
+
+        <div class="site-name">
+            <h1>InfiniteFortune</h1>
+        </div>
+
+        <div class="options">
+            <button id="options-button" onclick="toggleOptions()">Options</button>
+            <div id="options-div">
+                <a href="#" class="option">About Us</a>
+                <a href="#" class="option">Gambling</a>
+                <a href="#" class="option">Questions</a>
+            </div>
+
+        </div>
+
+    </div>
+
+    <div class="Register">
+        <h2>Register</h2>
+
+        <div class="form-login">
+            <form method="post" action="">
+                <br>
+                <label class="label"><b>Name:</b></label>
+                <input name="name-register" type="text">
+                <br><br>
+                <label class="label"><b>Surname:</b></label>
+                <input name="surname-register" type="text" >
+                <br><br>
+                <label class="label"><b>Password:</b></label>
+                <input name="password-register" type="password" >
+                <br><br>
+                <label class="label"><b>Confirm password:</b></label>
+                <input name="confPassword-register" type="password" >
+                <br><br>
+                <label class="label"><b>Email:</b></label>
+                <input name="email-register" type="email" >
+                <br>
+
+                <br>
+                <input id="signIn" type="submit" placeholder="Register">
+            </form>
+        </div>
+
+        <div class="login-text">
+            <p>Already have an account? <a href="{% url 'login:login' %}" style="color: rgba(233,223,40,10.8);">LogIn</a></p>
+        </div>
+    </div>
+
+    <div id="errorDiv" class="msg-error">
+        <h1>ERROR</h1>
+    </div>
+
+</body>
+</html>

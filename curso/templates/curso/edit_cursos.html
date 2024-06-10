@@ -1,0 +1,22 @@
+{% extends "curso/layout.html" %}
+
+{% block content %}
+
+    <div class="lista">
+        <h1 class="titulo">Cursos</h1>
+        <a href="{% url 'curso:novo_curso' %}" class="btn-novo">Novo Curso</a>
+        <br><br>
+        {% if cursos %}
+            <div class="album-container">
+                {% for curso in cursos %}
+                    <div class="album-item">
+                        <h3 class="txt">{{ curso.nome }}</h3>
+                        <a href="{% url 'curso:apaga_curso' curso.nome %}" class="apagar">Apagar Curso</a>
+                    </div>
+                {% endfor %}
+            </div>
+        {% else %}
+            <h2 class="titulo">Não há cursos disponíveis.</h2>
+        {% endif %}
+    </div>
+{% endblock %}

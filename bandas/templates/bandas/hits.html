@@ -1,0 +1,62 @@
+{% extends "bandas/layout.html" %}
+
+{% block content %}
+    <style>
+        .lista {
+            position:absolute;
+            top:50%;
+            left:50%;
+            transform: translate(-50%,-50%);
+            width:50%;
+            text-align: center;
+        }
+
+        .titulo {
+            color: #1db954;
+            font-size: 24px;
+            margin-bottom: 20px;
+        }
+
+        .lista-hits {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        .lista-hits li {
+            width: 50%;
+            background-color: #121212;
+            padding: 10px;
+            border-radius: 5px;
+            margin: 7px auto;
+            color:white;
+        }
+
+        .lista-hits li:hover{
+            background-color: #535353;
+            transform: scale(1.1);
+            cursor: pointer;
+        }
+
+        a{
+            text-decoration: none;
+        }
+
+    </style>
+
+    <div class="lista">
+        <h1 class="titulo">Hits</h1>
+        <br>
+        <p style="color:white;">Lista com o top 5 de músicas mais ouvidas esta semana!</p>
+        <br>
+        <ul class="lista-hits">
+            {% for hit in hits %}
+                <a href="{% url 'bandas:musica' hit.nome %}">
+                    <li>{{ forloop.counter }}º - {{ hit.nome }}</li>
+                    {% if musica.letra %}
+                        <img src="/static/bandas/imgs/email.png" alt="Letra disponível" class="letra-icon">
+                    {% endif %}
+                </a>
+            {% endfor %}
+        </ul>
+    </div>
+{% endblock %}

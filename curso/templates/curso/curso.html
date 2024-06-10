@@ -1,0 +1,20 @@
+{% extends "curso/layout.html" %}
+
+{% block content %}
+    <div class="content">
+        <h1>{{ curso.nome }}</h1>
+        <div class="curso-info">
+            <p><strong>Apresentação:</strong> {{ curso.apresentacao }}</p>
+            <p><strong>Objetivos:</strong> {{ curso.objetivos }}</p>
+            <p><strong>Competências:</strong> {{ curso.competencias }}</p>
+            <p><strong>Duração:</strong> 3 anos - {{ curso.duracao }} horas</p>
+            <p><strong>Creditos:</strong> {{ curso.creditos }} ECTS</p>
+        </div>
+        <h2>Disciplinas:</h2>
+        <ul class="disciplinas">
+            {% for item in curso.lista.all %}
+            <li><a href="{% url 'curso:disciplina' curso.nome item.disciplina.nome %}">{{ item.disciplina.nome }}</a></li>
+            {% endfor %}
+        </ul>
+    </div>
+{% endblock %}

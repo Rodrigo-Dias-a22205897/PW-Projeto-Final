@@ -1,0 +1,22 @@
+{% extends "artigos/layout.html" %}
+
+{% block content %}
+    <div class="content">
+        <h1>Artigos</h1>
+
+        {% if artigos %}
+            {% for artigo in artigos %}
+                <a href="{% url 'artigos:artigo' artigo.id %}">
+                    <div class="artigo-div">
+                        <h2>{{ artigo.titulo }}</h2>
+                        <br>
+                        <img src="{{ artigo.foto.url }}" alt="{{ artigo.autor }}">
+                        <p>{{ artigo.data }} - {{ artigo.get_tema }}</p>
+                    </div>
+                </a>
+            {% endfor %}
+        {% else %}
+            <p>Não há artigos disponíveis no momento.</p>
+        {% endif %}
+    </div>
+{% endblock %}

@@ -1,0 +1,169 @@
+body {
+    margin: 0px;
+    padding: 0px;
+    font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+    font-size: medium;
+    background: white;
+}
+
+header {
+    width: 100%;
+    background: #49aafa;
+    text-align: center;
+    position: fixed;
+    top: 0;
+    z-index: 1000;
+}
+
+header img{
+    max-height:50px;
+    width: auto;
+    left: 5%;
+    top: 25%;
+    position: absolute;
+}
+
+footer {
+    width: 100%;
+    background: #49aafa;
+    position: fixed;
+    bottom: 0;
+    z-index: 1000;
+}
+
+a{
+    text-decoration: none;
+    color: black;
+}
+
+.btn-1 {
+    right: 5%;
+    top: 25%;
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    background: #9ab5c2;
+    border: none;
+    border-radius: 50%;
+    font-size: 25px;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+    z-index: 1000;
+}
+
+.btn-1:hover {
+    transform: scale(1.1);
+}
+
+.txt-1{
+    color: black;
+    margin:20px;
+}
+
+.filtro-btn{
+    background-color: #9ab5c2;
+}
+
+.filtro-btn:hover{
+    cursor: pointer;
+}
+
+.content {
+    margin-top: 130px;
+    padding-bottom: 50px;
+    width: 50%;
+    text-align: center;
+    position:absolute;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.artigo-div {
+    width: 100%;
+    border: 2px solid black;
+    margin-bottom: 20px;
+    background-color: #9ab5c2;
+    align-items: center;
+    text-align: center;
+}
+
+.artigo-div img{
+    height: 350px;
+    width: auto;
+}
+
+.artigo-div h2{
+    max-width: 80%;
+
+    margin: 15px auto;
+}
+
+.artigo-div h2:hover{
+    color: #3d5662;
+}
+
+.filtros{
+    margin: 20px;
+}
+
+.btn-entrar{
+    background-color: #49aafa;
+    border: none;
+    padding: 25px;
+    font-size: 25px;
+    border-radius: 15px;
+}
+
+.btn-entrar:hover{
+    background-color: #8bdbfd;
+    transform: scale(1.2);
+}
+
+.content-artigo {
+    margin-top: 130px;
+    padding-bottom: 100px;
+    width: 90%;
+    text-align: center;
+    position: absolute;
+    left:50%;
+    transform: translate(-50%);
+}
+
+.autor-img{
+    height: 100px;
+    width: auto;
+}
+
+.autor-img_2{
+    height: 300px;
+    width: auto;
+}
+
+.autor-img:hover{
+    transform:scale(1.2);
+}
+
+.artigo-img{
+    height: 400px;
+    width: auto;
+}
+
+.div-comentarios{
+    left:10%;
+    text-align: left;
+}
+
+.respostas{
+    transform: translate(5%);
+    text-align: left;
+}
+
+.content-autor {
+    margin-top: 130px;
+    padding-bottom: 100px;
+    width: 90%;
+    text-align: center;
+    position: absolute;
+    left:50%;
+    transform: translate(-50%);
+}

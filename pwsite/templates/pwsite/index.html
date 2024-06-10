@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Programação Web</title>
+    <style>
+        body {
+            margin: 10px;
+            padding: 10px;
+            font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+            font-size: medium;
+            background: #393e46;
+        }
+
+        nav {
+            padding: 10px;
+            width: fit-content;
+            background-color: #fed028;
+            backdrop-filter: blur(20px);
+            position:absolute;
+            left: 50%;
+            transform: translate(-50%);
+            z-index: 1000;
+        }
+
+        nav a{
+            padding:10px;
+            text-decoration: none;
+            color: black;
+        }
+
+        main{
+            position:absolute;
+            top:30%;
+            left:50%;
+            transform: translate(-50%);
+            text-align: center;
+        }
+
+        footer{
+            position:absolute;
+            bottom:0;
+        }
+
+        ul li{
+            margin: 20px;
+        }
+
+
+        .txt-1{
+            color:rgb(0, 162, 255);
+        }
+
+        .txt-2{
+            color:#28d7fe;
+        }
+
+        .txt-3{
+            color:#ecfffb;
+        }
+
+        .txt-4{
+            color:rgb(0, 162, 255);
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1 class="txt-2">Programação Web</h1>
+
+        <nav>
+            <a href="{% url 'pwsite:index' %}">Introducao</a>
+            <a href="{% url 'pwsite:sobre' %}">Sobre</a>
+            <a href="{% url 'pwsite:interesses' %}">Interesses</a>
+        </nav>
+    </header>
+
+    <main>
+        <h2 class="txt-1">Construindo o Futuro da Web</h2>
+        <p class="txt-3">Neste curso, exploraremos diversas tecnologias essenciais para o desenvolvimento web moderno:</p>
+        <ul class="txt-1">
+            <li><strong>Python e Django:</strong> Utilizados para construir aplicações web robustas e escaláveis, para perfecionistas com prazos.</li>
+            <li><strong>HTML, CSS e JavaScript:</strong> Essenciais para criar a estrutura, estilo e interatividade das páginas web.</li>
+        </ul>
+        <p class="txt-3">Vamos mergulhar a fundo nestas tecnologias e aprender a criar experiências incríveis na web!</p>
+    </main>
+
+    <footer>
+        <p class="txt-2">&copy; 2024 Programação Web, Universidade Lusófona - Todos os direitos reservados.</p>
+    </footer>
+
+</body>
+</html>

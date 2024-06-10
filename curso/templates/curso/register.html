@@ -1,0 +1,44 @@
+{% extends "curso/layout.html" %}
+
+{% block content %}
+    <style>
+    .logout-div{
+        display:none;
+    }
+    </style>
+
+    <div class="Register">
+        <h2>Registar</h2>
+
+        <div class="form-login">
+            {% if mensagem %}
+              <p>mensagem: {{ mensagem }}</p>
+            {% endif %}
+            <form action="" method="post">
+                {% csrf_token %}
+                <label class="label"><b>Username:</b></label>
+                <input name="username" type="text" >
+                <br><br>
+                <label class="label"><b>Nome:</b></label>
+                <input name="nome" type="text">
+                <br><br>
+                <label class="label"><b>Apelido:</b></label>
+                <input name="apelido" type="text" >
+                <br><br>
+                <label class="label"><b>Password:</b></label>
+                <input name="password" type="password" >
+                <br><br>
+                <label class="label"><b>Email:</b></label>
+                <input name="email" type="email" >
+
+
+                <br><br>
+                <input id="signIn" type="submit" placeholder="Register">
+            </form>
+        </div>
+
+        <div class="register-text">
+            <p>Já tens uma conta? <a href="{% url 'curso:login' %}" style="color: #44a4ec;">Faz Log-In</a></p>
+        </div>
+    </div>
+{% endblock %}

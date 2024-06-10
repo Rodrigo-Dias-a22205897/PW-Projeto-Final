@@ -1,0 +1,147 @@
+{% extends "bandas/layout.html" %}
+
+{% block content %}
+    <style>
+        .lista {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%,-50%);
+            width: 50%;
+            text-align: center;
+        }
+
+        .titulo {
+            color: #1db954;
+            font-size: 24px;
+            margin-bottom: 20px;
+        }
+
+        .album-container {
+            width: 100%;
+            margin: 0 auto;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+        }
+
+        .album-image {
+            max-width: 100%;
+            height: auto;
+            border-radius: 5px;
+            margin-bottom: 10px;
+        }
+
+        .txt {
+            color: white;
+            margin-bottom: 10px;
+        }
+
+        .btn-container {
+            display: flex;
+            justify-content: center;
+            margin-top: 10px;
+        }
+
+        .btn {
+            padding: 5px 10px;
+            font-size: 14px;
+            background-color: #1db954;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            margin: 0 5px;
+            height:fit-content;
+            top:40%;
+            position:absolute;
+            font-size: 40px;
+        }
+
+        .btn:hover {
+            background-color: #158543;
+            transform: scale(1.1);
+        }
+
+        .grid-container {
+            display: grid;
+            grid-template-columns: repeat(3, 2fr);
+            gap: 20px;
+            margin: 20px;
+        }
+
+    </style>
+
+    <div class="lista">
+        <h1 class="titulo">Álbuns</h1>
+        <br><br>
+        {% if albuns %}
+            <div class="grid-container">
+                <div class="btn-container">
+                    <button id="prev-btn" class="btn" onclick="prevAlbum()">&#9664;</button>
+                </div>
+
+                <div class="album-container">
+                    <a href="#" id="album-link" data-url="https://a22205897.pythonanywhere.com/bandas/album/">
+                        <img id="album-image" class="album-image" src="{{ albuns.0.capa.url }}" alt="{{ albuns.0.nome }}">
+                    </a>
+                    <h3 id="album-nome" class="txt">{{ albuns.0.nome }}</h3>
+                    <p id="album-banda" class="txt">{{ albuns.0.banda }}</p>
+                </div>
+
+                <div class="btn-container">
+                    <button id="next-btn" class="btn" onclick="nextAlbum()">&#9654;</button>
+                </div>
+            </div>
+
+        {% else %}
+            <h2 class="titulo">Não há álbuns disponíveis.</h2>
+        {% endif %}
+    </div>
+
+    <script>
+        var lista = [
+            {% for album in albuns %}
+                {
+                    {% if album.capa %}
+                        imagem: "{{ album.capa.url }}",
+                    {% else %}
+                        imagem: "",
+                    {% endif %}
+                    nome: "{{ album.nome }}",
+                    banda: "{{ album.banda }}"
+                },
+            {% endfor %}
+        ];
+
+        var albumIndex = 0;
+        var albumImagem = document.getElementById("album-image");
+        var albumNome = document.getElementById("album-nome");
+        var albumBanda = document.getElementById("album-banda");
+
+        function displayAlbum(index) {
+            if (index >= 0 && index < lista.length) {
+                albumImagem.src = lista[index].imagem;
+                albumImagem.alt = lista[index].nome;
+                albumNome.innerText = lista[index].nome;
+                albumBanda.innerText = lista[index].banda;
+                var albumLink = document.getElementById("album-link");
+                var baseUrl = albumLink.getAttribute("data-url");
+                var albumName = lista[index].nome;
+                albumLink.href = baseUrl + albumName;
+                albumIndex = index;
+            }
+        }
+
+        function prevAlbum() {
+            displayAlbum(albumIndex - 1);
+        }
+
+        function nextAlbum() {
+            displayAlbum(albumIndex + 1);
+        }
+
+        displayAlbum(albumIndex);
+    </script>
+{% endblock %}

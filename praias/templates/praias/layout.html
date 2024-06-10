@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Praias</title>
+    <style>
+        body {
+            margin: 0px;
+            padding: 0px;
+            font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+            font-size: medium;
+            background: white;
+            color: black;
+        }
+
+        header{
+            top: 0;
+            width: 100%;
+            position:fixed;
+            background:#121212;
+            z-index: 1000;
+        }
+
+        main{
+            position:absolute;
+            left:50%;
+            top: 15%;
+            transform: translate(-50%);
+        }
+
+        footer{
+            position:fixed;
+            bottom:0;
+            width:100%;
+            background:#121212;
+            color: white;
+        }
+
+        footer p{
+            margin: 10px;
+        }
+
+        h1{
+            margin: 15px;
+            color: #44a4ec;
+        }
+
+        a{
+            text-decoration: none;
+            color: #44a4ec;
+            font-weight: bold;
+        }
+
+        .servicos{
+            margin-left: 25px;
+            margin-top: 5px;
+            list-style-type: none;
+        }
+
+        .servicos li::before{
+            content: "- ";
+        }
+
+        .lista-btn {
+            display: inline-block;
+            padding: 10px 20px;
+            margin: 10px;
+            background-color: #44a4ec;
+            color: #fff;
+            text-decoration: none;
+            border-radius: 5px;
+        }
+
+        .lista-btn:hover {
+            transform: scale(1.1);
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Praias</h1>
+    </header>
+
+    <main>
+        {% block content %}
+        {% endblock %}
+    </main>
+
+    <footer>
+        <p>2024</p>
+    </footer>
+
+</body>
+</html>

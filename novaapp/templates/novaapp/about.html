@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Site</title>
+    <style>
+        body {
+            margin: 0px;
+            padding: 0px;
+            font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+            font-size: medium;
+            background: #393e46;
+        }
+
+        header{
+            top: 0;
+            width: 100%;
+            position:absolute;
+            background:#fed028;
+        }
+
+        nav {
+            padding: 10px;
+            width: fit-content;
+        }
+
+        nav a{
+            padding:10px;
+            text-decoration: none;
+            color: black;
+        }
+
+        main{
+            position:absolute;
+            top:20%;
+            left:50%;
+            transform: translate(-50%);
+            text-align: center;
+        }
+
+        footer{
+            position:absolute;
+            bottom:0;
+        }
+
+        ul li{
+            margin: 20px;
+        }
+
+
+        .txt-1{
+            color:black;
+        }
+
+        .txt-2{
+            margin: 10px;
+            color:black;
+        }
+
+        .txt-3{
+            color:#ecfffb;
+        }
+
+        .txt-4{
+            color: #28d7fe;
+            margin:5px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1 class="txt-2">Programação Web</h1>
+
+        <nav>
+            <a href="{% url 'novaapp:index' %}">Menu</a>
+            <a href="{% url 'novaapp:calculator' %}">Calculator</a>
+            <a href="{% url 'login:index' %}">Log/Reg</a>
+            <a href="{% url 'novaapp:contact' %}">Contact Me</a>
+        </nav>
+    </header>
+
+    <main>
+        <h2 class="txt-4">About Me:</h2>
+        <br><br>
+        <p class="txt-3">
+            Welcome to my digital realm! I'm Rodrigo Dias, a Computer Engineering enthusiast currently in my second year of the degree.
+            With highlighted social skills and a passion for teamwork. I am looking for a new opportunity to develop my professional skills.
+        </p>
+        <br>
+        <p class="txt-3">
+            Early on, I discovered that my true passion lies in practicing and showcasing my capabilities as a developer. Programming is more than just lines of code to me,
+            it's a fascinating universe filled with endless possibilities. I decided to make a show case of my work. This project not only reflects my dedication to programming
+            but also serves as an opportunity to demonstrate how I can apply my skills to create something both enjoyable and functional.
+        </p>
+        <br>
+        <p class="txt-3">
+            I believe this project is just the beginning of an exciting journey. I'm enthusiastic about the prospect of many more projects
+            in the future. I'm looking forward to sharing my experiences, continuing to learn, and contributing to the vast world of technology.
+        </p>
+        <br>
+        <p class="txt-3">
+            Let's build a future full of innovation and challenges together!
+        </p>
+        <br>
+    </main>
+
+    <footer>
+        <p class="txt-4">&copy; 2024 Rodigo Dias, Universidade Lusófona - Todos os direitos reservados.</p>
+    </footer>
+
+</body>
+</html>

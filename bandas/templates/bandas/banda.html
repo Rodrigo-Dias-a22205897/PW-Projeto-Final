@@ -1,0 +1,84 @@
+{% extends "bandas/layout.html" %}
+
+{% block content %}
+    <style>
+        .lista {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            max-width: 80%;
+            text-align: center;
+        }
+
+        .titulo {
+            color: #1db954;
+            font-size: 24px;
+            margin-bottom: 20px;
+        }
+
+        .grid-container {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 20px;
+            margin: 20px auto;
+        }
+
+        .album {
+            text-align: center;
+
+        }
+
+        .album img {
+            max-width: 70%;
+            height: auto;
+            transition: transform 0.3s;
+        }
+
+        .album img:hover {
+            transform: scale(1.1);
+        }
+
+        .lista-musicas {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        .lista-musicas li {
+            background-color: #121212;
+            padding: 10px;
+            border-radius: 5px;
+            margin: 7px auto;
+            color: white;
+            text-align: center;
+            max-width: 30%;
+        }
+
+        .lista-musicas li:hover {
+            background-color: #535353;
+            transform: scale(1.1);
+            cursor: pointer;
+        }
+
+        a {
+            text-decoration: none;
+        }
+    </style>
+
+    <div class="lista">
+        <h1 class="titulo">{{ banda.nome }} - {{ banda.anoCriacao }}</h1>
+        <br>
+        <div class="grid-container">
+            {% for album in banda.albuns.all %}
+                <div class="album">
+                    <a href="{% url 'bandas:album' album.nome %}">
+                        <img src="{{ album.capa.url }}" alt="{{ album.nome }}">
+                    </a>
+                    <p style="color:white;">{{ album.nome }} - {{ album.anoLancamento }}</p>
+                </div>
+            {% endfor %}
+        </div>
+        <br>
+        <p style="color: white;">{{ banda.descricao }}</p>
+    </div>
+{% endblock %}

@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Radar do Tempo</title>
+    <link rel="stylesheet" type="text/css" href="/static/meteo/style.css">
+    <link rel="icon" type="image/x-icon" href="/static/meteo/w_ic_d_02.svg">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f5f5f5;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+
+        a {
+            text-decoration: none;
+            color: white;
+        }
+
+        h1 {
+            text-align: center;
+            margin: 20px;
+            color: #333;
+            display: flex;
+            align-items: center;
+        }
+
+        header {
+            background-color: #2196f3;
+            color: white;
+            padding: 20px 0;
+            text-align: center;
+            border-radius: 5px;
+            margin-bottom: 20px;
+            width: 100%;
+            max-width: 100%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            width: 70px;
+            height: auto;
+            margin-left: 20px;
+            margin-right: 10px;
+        }
+
+        .header-content {
+            display: flex;
+            align-items: center;
+        }
+
+        .title {
+            font-size: 2.3em;
+            color: white;
+        }
+
+        nav {
+            margin-top: 10px;
+            margin-right: 50px;
+        }
+
+        .container {
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
+            padding: 20px;
+            width: 100%;
+            max-width: 1200px;
+        }
+
+        .region-section {
+            width: 100%;
+            max-width: 600px;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        .region-title {
+            text-align: center;
+            margin-bottom: 25px;
+        }
+
+        .region-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            list-style-type: none;
+            padding: 0;
+            justify-content: center;
+        }
+
+        .region-list a {
+            flex: 1 1 calc(50% - 10px);
+            text-decoration: none;
+            color: #007bff;
+        }
+
+        .region-list a:hover {
+            text-decoration: underline;
+        }
+
+        .regiao {
+            background-color: #fff;
+            padding: 10px;
+            margin-bottom: 10px;
+            border-radius: 5px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            transition: box-shadow 0.3s ease;
+            text-align: center;
+            position: relative;
+        }
+
+        .regiao:hover {
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .color-square {
+            width: 20px;
+            height: 20px;
+            position: absolute;
+            top: 50%;
+            left: 10px;
+            transform: translateY(-50%);
+        }
+
+        .nav-link {
+            color: #fff;
+            text-decoration: none;
+            font-size: 18px;
+            margin: 0 10px;
+        }
+
+        .nav-link:hover {
+            text-decoration: underline;
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                flex-direction: column;
+                padding: 10px;
+            }
+
+            .region-list a {
+                flex: 1 1 calc(100% - 10px);
+            }
+
+            header {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .logo {
+                margin: 0 0 10px 0;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <div class="header-content">
+            <img src="/static/meteo/w_ic_d_02.svg" alt="Weather Icon" class="logo">
+            <h1 class="title">Radar do Tempo</h1>
+        </div>
+        <nav>
+            <a href="{% url 'meteo:api' %}" class="nav-link">Documentação da API</a>
+        </nav>
+    </header>
+    <div class="container">
+        <div class="region-section">
+            <h1 class="region-title">Portugal</h1>
+            <ul class="region-list">
+                {% for regiao in regioes %}
+                    <a href="{% url 'meteo:previsao' regiao.globalIdLocal %}">
+                        <li class="regiao">
+                            <div class="color-square" data-color="{{ regiao.color }}"></div>
+                            {{ regiao.local }}
+                        </li>
+                    </a>
+                {% endfor %}
+            </ul>
+        </div>
+    </div>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            var colorSquares = document.querySelectorAll('.color-square');
+            colorSquares.forEach(function(square) {
+                var color = square.getAttribute('data-color');
+                square.style.backgroundColor = color;
+            });
+        });
+    </script>
+</body>
+</html>

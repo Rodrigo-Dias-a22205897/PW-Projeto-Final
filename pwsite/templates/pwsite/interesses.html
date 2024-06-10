@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Programação Web</title>
+    <style>
+        body {
+            margin: 10px;
+            padding: 10px;
+            font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+            font-size: medium;
+            background: #393e46;
+        }
+
+        nav {
+            padding: 10px;
+            width: fit-content;
+            background-color: #fed028;
+            backdrop-filter: blur(20px);
+            position:absolute;
+            left: 50%;
+            transform: translate(-50%);
+            z-index: 1000;
+        }
+
+        nav a{
+            padding:10px;
+            text-decoration: none;
+            color: black;
+        }
+
+        main{
+            position:absolute;
+            top:50%;
+            left:50%;
+            transform: translate(-50%,-50%);
+            text-align: center;
+        }
+
+        main p{
+            color:#ecfffb;
+        }
+
+        footer{
+            position:absolute;
+            bottom:0;
+        }
+
+        .txt-1{
+            color:rgb(0, 162, 255);
+        }
+
+        .txt-2{
+            color:#28d7fe;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1 class="txt-2">Programação Web</h1>
+
+        <nav>
+            <a href="{% url 'pwsite:index' %}">Introducao</a>
+            <a href="{% url 'pwsite:sobre' %}">Sobre</a>
+            <a href="{% url 'pwsite:interesses' %}">Interesses</a>
+        </nav>
+    </header>
+
+    <main>
+      <h2 class="txt-1">Interesses</h2>
+      <p>TBD</p>
+     </main>
+
+    <footer class="txt-2">
+        <p>&copy; 2024 Programação Web, Universidade Lusófona - Todos os direitos reservados.</p>
+    </footer>
+
+</body>
+</html>

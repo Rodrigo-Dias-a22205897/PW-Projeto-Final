@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" type="text/css" href="/static/curso/style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Universidade</title>
+</head>
+<body>
+    <header>
+        <h1>Universidade</h1>
+        <div class="logout-div">
+            {% if request.user.is_authenticated %}
+                Username: {{request.user.username}}
+                <a href="{% url 'curso:logout' %}"><button class="btn-logout">Logout</button></a>
+            {% else %}
+                <a href="{% url 'curso:login' %}"><button class="btn-logout">Login</button></a>
+            {% endif %}
+        </div>
+        <a href="{% url 'curso:universidade' %}">
+            <img src="/static/curso/menu.png">
+        </a>
+        <button class="btn-1" onclick="window.history.back()">&#9664;</button>
+    </header>
+
+    {% block content %}
+    {% endblock %}
+
+    <footer>
+        <p class="txt-1">&copy; 2024 Rodigo Dias, Universidade Lusófona - Todos os direitos reservados.</p>
+    </footer>
+</body>
+</html>

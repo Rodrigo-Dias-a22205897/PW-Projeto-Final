@@ -1,0 +1,62 @@
+{% extends "bandas/layout.html" %}
+
+{% block content %}
+    <style>
+        .musica {
+            position:absolute;
+            top:50%;
+            left:50%;
+            transform: translate(-50%,-50%);
+            width:50%;
+            text-align: center;
+            color: white;
+        }
+
+        .titulo {
+            color: #1db954;
+            font-size: 24px;
+            margin-bottom: 20px;
+        }
+
+        .btn {
+            padding: 5px 10px;
+            font-size: 14px;
+            background-color: #1db954;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            margin: 0 5px;
+            height:fit-content;
+            font-size: 20px;
+        }
+
+        .btn:hover {
+            background-color: #158543;
+            transform: scale(1.1);
+        }
+
+        a{
+            text-decoration:none;
+        }
+
+    </style>
+
+    <div class="musica">
+        <h1 class="titulo">{{musica.nome}}</h1>
+        <h3>Duração: {{musica.duracao}} minutos</h2>
+        <br>
+        <p>{{musica.descricao}}</p>
+        <br>
+        <a href="{{musica.link}}">
+            <button class="btn">Vídeo da música</button>
+        </a>
+        <br>
+        {% if musica.letra %}
+        <h3>Letra:</h3>
+        <p>{{musica.letra}}</p>
+        {% else %}
+        <p>Não tem letra ainda</p>
+        {% endif %}
+    </div>
+{% endblock %}

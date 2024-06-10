@@ -1,0 +1,478 @@
+[
+   {
+        "autor": "The Rolling Stones",
+        "nome": "Let It Bleed",
+        "anoLancamento": 1969,
+        "musicas": [
+            {
+                "nome": "Gimme Shelter",
+                "duracao": 4.31
+            },
+            {
+                "nome": "You Can't Always Get What You Want",
+                "duracao": 7.28
+            },
+            {
+                "nome": "Midnight Rambler",
+                "duracao": 6.52
+            },
+            {
+                "nome": "Monkey Man",
+                "duracao": 4.11
+            },
+            {
+                "nome": "You Got the Silver",
+                "duracao": 2.51
+            }
+        ]
+    },
+    {
+        "autor": "Led Zeppelin",
+        "nome": "Physical Graffiti",
+        "anoLancamento": 1975,
+        "musicas": [
+            {
+                "nome": "Kashmir",
+                "duracao": 8.28
+            },
+            {
+                "nome": "Trampled Under Foot",
+                "duracao": 5.36
+            },
+            {
+                "nome": "In My Time of Dying",
+                "duracao": 11.04
+            },
+            {
+                "nome": "Houses of the Holy",
+                "duracao": 4.01
+            },
+            {
+                "nome": "Ten Years Gone",
+                "duracao": 6.32
+            }
+        ]
+    },
+    {
+        "autor": "Pink Floyd",
+        "nome": "Wish You Were Here",
+        "anoLancamento": 1975,
+        "musicas": [
+            {
+                "nome": "Shine On You Crazy Diamond",
+                "duracao": 13.32
+            },
+            {
+                "nome": "Welcome to the Machine",
+                "duracao": 7.32
+            },
+            {
+                "nome": "Have a Cigar",
+                "duracao": 5.08
+            },
+            {
+                "nome": "Wish You Were Here",
+                "duracao": 5.34
+            },
+            {
+                "nome": "Shine On You Crazy Diamond (Part Two)",
+                "duracao": 12.31
+            }
+        ]
+    },
+    {
+        "autor": "Queen",
+        "nome": "News of the World",
+        "anoLancamento": 1977,
+        "musicas": [
+            {
+                "nome": "We Will Rock You",
+                "duracao": 2.01
+            },
+            {
+                "nome": "We Are the Champions",
+                "duracao": 3.01
+            },
+            {
+                "nome": "Spread Your Wings",
+                "duracao": 4.34
+            },
+            {
+                "nome": "It's Late",
+                "duracao": 6.26
+            },
+            {
+                "nome": "My Melancholy Blues",
+                "duracao": 3.29
+            }
+        ]
+    },
+    {
+        "autor": "The Beatles",
+        "nome": "The White Album",
+        "anoLancamento": 1968,
+        "musicas": [
+            {
+                "nome": "Back in the U.S.S.R.",
+                "duracao": 2.43
+            },
+            {
+                "nome": "Dear Prudence",
+                "duracao": 3.56
+            },
+            {
+                "nome": "While My Guitar Gently Weeps",
+                "duracao": 4.45
+            },
+            {
+                "nome": "Happiness Is a Warm Gun",
+                "duracao": 2.43
+            },
+            {
+                "nome": "Blackbird",
+                "duracao": 2.18
+            }
+        ]
+    },
+    {
+        "autor": "AC/DC",
+        "nome": "Back in Black",
+        "anoLancamento": 1980,
+        "musicas": [
+            {
+                "nome": "Hells Bells",
+                "duracao": 5.12
+            },
+            {
+                "nome": "Shoot to Thrill",
+                "duracao": 5.17
+            },
+            {
+                "nome": "What Do You Do for Money Honey",
+                "duracao": 3.35
+            },
+            {
+                "nome": "Rock and Roll Ain't Noise Pollution",
+                "duracao": 4.12
+            },
+            {
+                "nome": "Let Me Put My Love into You",
+                "duracao": 4.15
+            }
+        ]
+    },
+    {
+        "autor": "Guns N' Roses",
+        "nome": "Use Your Illusion I",
+        "anoLancamento": 1991,
+        "musicas": [
+            {
+                "nome": "Right Next Door to Hell",
+                "duracao": 3.02
+            },
+            {
+                "nome": "Dust N' Bones",
+                "duracao": 4.58
+            },
+            {
+                "nome": "Live and Let Die",
+                "duracao": 3.04
+            },
+            {
+                "nome": "Don't Cry",
+                "duracao": 4.45
+            },
+            {
+                "nome": "Perfect Crime",
+                "duracao": 2.23
+            }
+        ]
+    },
+    {
+        "autor": "The Who",
+        "nome": "Tommy",
+        "anoLancamento": 1969,
+        "musicas": [
+            {
+                "nome": "Overture",
+                "duracao": 5.21
+            },
+            {
+                "nome": "It's a Boy",
+                "duracao": 2.07
+            },
+            {
+                "nome": "1921",
+                "duracao": 2.49
+            },
+            {
+                "nome": "The Acid Queen",
+                "duracao": 3.34
+            },
+            {
+                "nome": "Pinball Wizard",
+                "duracao": 3.02
+            }
+        ]
+    },
+    {
+        "autor": "Black Sabbath",
+        "nome": "Master of Reality",
+        "anoLancamento": 1971,
+        "musicas": [
+            {
+                "nome": "Sweet Leaf",
+                "duracao": 5.04
+            },
+            {
+                "nome": "After Forever",
+                "duracao": 5.27
+            },
+            {
+                "nome": "Children of the Grave",
+                "duracao": 5.17
+            },
+            {
+                "nome": "Orchid",
+                "duracao": 1.31
+            },
+            {
+                "nome": "Lord of This World",
+                "duracao": 5.26
+            }
+        ]
+    },
+    {
+        "autor": "Deep Purple",
+        "nome": "In Rock",
+        "anoLancamento": 1970,
+        "musicas": [
+            {
+                "nome": "Speed King",
+                "duracao": 5.52
+            },
+            {
+                "nome": "Bloodsucker",
+                "duracao": 4.15
+            },
+            {
+                "nome": "Child in Time",
+                "duracao": 10.16
+            },
+            {
+                "nome": "Flight of the Rat",
+                "duracao": 7.53
+            },
+            {
+                "nome": "Into the Fire",
+                "duracao": 3.28
+            }
+        ]
+    },
+    {
+        "autor": "The Rolling Stones",
+        "nome": "Sticky Fingers",
+        "anoLancamento": 1971,
+        "musicas": [
+            {
+                "nome": "Brown Sugar",
+                "duracao": 3.52
+            },
+            {
+                "nome": "Wild Horses",
+                "duracao": 5.41
+            },
+            {
+                "nome": "Can't You Hear Me Knocking",
+                "duracao": 7.14
+            },
+            {
+                "nome": "Bitch",
+                "duracao": 3.36
+            },
+            {
+                "nome": "Sister Morphine",
+                "duracao": 5.34
+            }
+        ]
+    },
+    {
+        "autor": "Led Zeppelin",
+        "nome": "Led Zeppelin IV",
+        "anoLancamento": 1971,
+        "musicas": [
+            {
+                "nome": "Black Dog",
+                "duracao": 4.54
+            },
+            {
+                "nome": "Rock and Roll",
+                "duracao": 3.4
+            },
+            {
+                "nome": "Stairway to Heaven",
+                "duracao": 8.03
+            },
+            {
+                "nome": "Misty Mountain Hop",
+                "duracao": 4.38
+            }
+        ]
+    },
+    {
+        "autor": "Pink Floyd",
+        "nome": "The Dark Side of the Moon",
+        "anoLancamento": 1973,
+        "musicas": [
+            {
+                "nome": "Speak to Me",
+                "duracao": 1.3
+            },
+            {
+                "nome": "Breathe",
+                "duracao": 2.43
+            },
+            {
+                "nome": "On the Run",
+                "duracao": 3.35
+            },
+            {
+                "nome": "Time",
+                "duracao": 7.06
+            }
+        ]
+    },
+    {
+        "autor": "Queen",
+        "nome": "A Night at the Opera",
+        "anoLancamento": 1975,
+        "musicas": [
+            {
+                "nome": "Death on Two Legs",
+                "duracao": 3.43
+            },
+            {
+                "nome": "Lazing on a Sunday Afternoon",
+                "duracao": 1.07
+            },
+            {
+                "nome": "'39",
+                "duracao": 3.3
+            }
+        ]
+    },
+    {
+        "autor": "The Beatles",
+        "nome": "Abbey Road",
+        "anoLancamento": 1969,
+        "musicas": [
+            {
+                "nome": "Come Together",
+                "duracao": 4.2
+            },
+            {
+                "nome": "Something",
+                "duracao": 3.03
+            },
+            {
+                "nome": "Maxwell's Silver Hammer",
+                "duracao": 3.27
+            }
+        ]
+    },
+    {
+        "autor": "AC/DC",
+        "nome": "Highway to Hell",
+        "anoLancamento": 1979,
+        "musicas": [
+            {
+                "nome": "Highway to Hell",
+                "duracao": 3.28
+            },
+            {
+                "nome": "Girls Got Rhythm",
+                "duracao": 3.23
+            },
+            {
+                "nome": "Walk All Over You",
+                "duracao": 5.1
+            }
+        ]
+    },
+    {
+        "autor": "Guns N' Roses",
+        "nome": "Appetite for Destruction",
+        "anoLancamento": 1987,
+        "musicas": [
+            {
+                "nome": "Welcome to the Jungle",
+                "duracao": 4.31
+            },
+            {
+                "nome": "Sweet Child o' Mine",
+                "duracao": 5.56
+            },
+            {
+                "nome": "Paradise City",
+                "duracao": 6.46
+            }
+        ]
+    },
+    {
+        "autor": "The Who",
+        "nome": "Who's Next",
+        "anoLancamento": 1971,
+        "musicas": [
+            {
+                "nome": "Baba O'Riley",
+                "duracao": 5.01
+            },
+            {
+                "nome": "Bargain",
+                "duracao": 5.33
+            },
+            {
+                "nome": "Behind Blue Eyes",
+                "duracao": 3.42
+            }
+        ]
+    },
+    {
+        "autor": "Black Sabbath",
+        "nome": "Paranoid",
+        "anoLancamento": 1970,
+        "musicas": [
+            {
+                "nome": "War Pigs",
+                "duracao": 7.55
+            },
+            {
+                "nome": "Paranoid",
+                "duracao": 2.48
+            },
+            {
+                "nome": "Planet Caravan",
+                "duracao": 4.32
+            }
+        ]
+    },
+    {
+        "autor": "Deep Purple",
+        "nome": "Machine Head",
+        "anoLancamento": 1972,
+        "musicas": [
+            {
+                "nome": "Highway Star",
+                "duracao": 6.05
+            },
+            {
+                "nome": "Smoke on the Water",
+                "duracao": 5.42
+            },
+            {
+                "nome": "Lazy",
+                "duracao": 7.19
+            }
+        ]
+    }
+]

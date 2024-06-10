@@ -1,0 +1,45 @@
+{% extends "curso/layout.html" %}
+
+{% block content %}
+    <style>
+        .logout-div{
+           display:none;
+        }
+    </style>
+
+    <div class="mesagem">
+        {% if mensagem %}
+              <p>mensagem: {{ mensagem }}</p>
+        {% endif %}
+    </div>
+
+    <div class="Login">
+        <h2>Login</h2>
+
+        <div class="form-login">
+            {% if mensagem %}
+              <p>mensagem: {{ mensagem }}</p>
+            {% endif %}
+            <form action="" method="post">
+                {% csrf_token %}
+                <br>
+                <label class="label"><b>Username:</b></label>
+                <input id="username-login" type="text" name="username">
+                <br><br>
+                <label class="label"><b>Password:</b></label>
+                <input id="password-login" type="password"  name="password">
+                <br>
+                <br>
+                <button id="signIn" type="submit">Sign in</button>
+            </form>
+        </div>
+
+        <div class="recover-text">
+            <p><a href="" style="color: #44a4ec;">Esqueceste os teus dados?</a></p>
+        </div>
+
+        <div class="register-text">
+            <p>Ainda não tens uma conta? <a href="{% url 'curso:register' %}" style="color: #44a4ec;">Registar</a></p>
+        </div>
+    </div>
+{% endblock %}

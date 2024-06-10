@@ -1,0 +1,19 @@
+{% extends "curso/layout.html" %}
+
+{% block content %}
+    <div class="content">
+        <h1>{{ projeto.nome }}</h1>
+        <div class="project-info">
+            <p><strong>Descrição:</strong> {{ projeto.descricao }}</p>
+            <p><strong>Conceitos:</strong> {{ projeto.conceitos }}</p>
+            <p><strong>Tecnologias:</strong> {{ projeto.tecnologias }}</p>
+            {% if projeto.imagem %}
+            <img src="{{ projeto.imagem.url }}" alt="Imagem do Projeto">
+            {% endif %}
+            <p><strong>Disciplina:</strong> {{ projeto.disciplina }}</p>
+            <p><strong>Linguagem de Programação:</strong> {{ projeto.linguagemProgramacao }}</p>
+            <a href="{{ projeto.linkGit }}" class="git-btn">Link Git</a>
+            <a href="{{ projeto.linkVideo }}" class="video-btn">Link do Vídeo</a>
+        </div>
+    </div>
+{% endblock %}

@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Site</title>
+    <style>
+        body {
+            margin: 0px;
+            padding: 0px;
+            font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+            font-size: medium;
+            background: #393e46;
+        }
+
+        header{
+            top: 0;
+            width: 100%;
+            position:absolute;
+            background:#fed028;
+        }
+
+        nav {
+            padding: 10px;
+            width: fit-content;
+        }
+
+        nav a{
+            padding:10px;
+            text-decoration: none;
+            color: black;
+        }
+
+        main{
+            position:absolute;
+            top:25%;
+            left:50%;
+            transform: translate(-50%);
+            background-color: rgba(0, 0, 0, 0.8);
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            height: 400px;
+        }
+
+        footer{
+            position:absolute;
+            bottom:0;
+        }
+
+        ul li{
+            margin: 20px;
+        }
+
+
+        .txt-1{
+            color:black;
+        }
+
+        .txt-2{
+            margin: 10px;
+            color:black;
+        }
+
+        .txt-3{
+            color:#ecfffb;
+        }
+
+        .txt-4{
+            color:#28d7fe;
+            margin:5px;
+        }
+
+        main h3 {
+            margin-bottom: 20px;
+            text-align: center;
+            color: #20c2d8;
+        }
+
+        .form-group {
+            margin-bottom: 15px;
+            color: #20c2d8;
+        }
+
+        .form-group label {
+            display: inline-block;
+            margin-bottom: 10px;
+            font-weight: bold;
+        }
+
+        input[type="text"],
+        input[type="email"],
+        textarea {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            box-sizing: border-box;
+            resize: none;
+        }
+
+        input[type="submit"] {
+            width: 100%;
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            background-color: #20c2d8;
+            color: #fff;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #9be987;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1 class="txt-2">Programação Web</h1>
+
+        <nav>
+            <a href="{% url 'novaapp:index' %}">Menu</a>
+            <a href="{% url 'novaapp:calculator' %}">Calculator</a>
+            <a href="{% url 'login:index' %}">Log/Reg</a>
+            <a href="{% url 'novaapp:about' %}">About</a>
+        </nav>
+    </header>
+
+    <main>
+        <form action="https://api.web3forms.com/submit" method="POST">
+            <input type="hidden" name="access_key" value="1b5a58f3-4108-46d2-a30d-0ad35448db85">
+            <h3>Send me an Email</h3>
+            <div class="form-group">
+                <label for="name">Your Name:</label><br>
+                <input type="text" id="name" name="name" required>
+            </div>
+            <div class="form-group">
+                <label for="email">Your Email:</label><br>
+                <input type="email" id="email" name="email" required>
+            </div>
+            <div class="form-group">
+                <label for="message">Message:</label><br>
+                <textarea id="message" name="message" rows="4" cols="50" required></textarea>
+            </div>
+            <input type="submit" value="Send Email">
+        </form>
+    </main>
+
+    <footer>
+        <p class="txt-4">&copy; 2024 Rodigo Dias, Universidade Lusófona - Todos os direitos reservados.</p>
+    </footer>
+
+</body>
+</html>

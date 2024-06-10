@@ -1,0 +1,24 @@
+{% extends "praias/layout.html" %}
+
+{% block content %}
+    <div class="container">
+        <h1>Bem-vindo às Praias de Portugal</h1>
+        <h2>Escolhe a tua Praia:</h2>
+        <div>
+            {% for regiao in regioes %}
+                <h2>{{ regiao }}</h2>
+                {% for praia in regiao.praias.all %}
+                    <li><a href="{% url 'praias:praia' praia.nome %}">{{ praia }}:</a></li>
+                    <div class="servicos">
+                        {% for item in praia.lista.all %}
+                            <li>{{ item.servico }}</li>
+                        {% endfor %}
+                    </div>
+
+                    <br>
+                {% endfor %}
+            {% endfor %}
+        </div>
+    </div>
+{% endblock %}
+

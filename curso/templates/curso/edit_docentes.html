@@ -1,0 +1,22 @@
+{% extends "curso/layout.html" %}
+
+{% block content %}
+
+    <div class="lista">
+        <h1 class="titulo">Docentes</h1>
+        <a href="{% url 'curso:novo_curso' %}" class="btn-novo">Novo Docente</a>
+        <br><br>
+        {% if docentes %}
+            <div class="album-container">
+                {% for docente in docentes %}
+                    <div class="album-item">
+                        <h3 class="txt">{{ docente.nome }}</h3>
+                        <a href="{% url 'curso:apaga_docente' docente.nome %}" class="apagar">Apagar Docente</a>
+                    </div>
+                {% endfor %}
+            </div>
+        {% else %}
+            <h2 class="titulo">Não há docentes disponíveis.</h2>
+        {% endif %}
+    </div>
+{% endblock %}

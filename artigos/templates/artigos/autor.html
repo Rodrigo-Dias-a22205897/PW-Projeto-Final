@@ -1,0 +1,28 @@
+{% extends "artigos/layout.html" %}
+
+{% block content %}
+    <div class="content-autor">
+        <h1 class="">{{ autor.nome }} {{ autor.apelido }} - {{ autor.idade }} anos</h1>
+
+        <img class="autor-img_2" src="{{ autor.foto.url }}" alt="{{ autor.nome }}">
+        <p>No observa desde {{ autor.data|date:"Y" }}</p>
+        <br>
+
+        <h2>Artigos de {{ autor.nome }}</h2>
+        <br>
+
+        {% for artigo in autor.artigos.all %}
+            <a href="{% url 'artigos:artigo' artigo.id %}">
+                <div class=artigo-div>
+                    <h2>{{ artigo.titulo }}</h1>
+                    <br>
+                    <img src="{{ artigo.foto.url }}" alt="{{ artigo.autor }}">
+                    <p>{{ artigo.data }}</p>
+                    <br>
+                </div>
+            </a>
+        {% endfor %}
+
+
+    </div>
+{% endblock %}

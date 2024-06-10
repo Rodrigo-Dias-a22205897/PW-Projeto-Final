@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" type="text/css" href="/static/artigos/style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Observa</title>
+</head>
+<body>
+    <header>
+        <h1 class="txt-1">Observa</h1>
+
+        <a href="{% url 'artigos:artigos' %}">
+            <img src="/static/artigos/home.png" alt="Menu">
+        </a>
+
+        <div class="filtros">
+            <a href="{% url 'artigos:artigos_tema' 'Justiça' %}"><button class="filtro-btn">Justiça</button></a>
+            <a href="{% url 'artigos:artigos_tema' 'Cultura' %}"><button class="filtro-btn">Cultura</button></a>
+            <a href="{% url 'artigos:artigos_tema' 'Saúde' %}"><button class="filtro-btn">Saúde</button></a>
+            <a href="{% url 'artigos:artigos_tema' 'Desporto' %}"><button class="filtro-btn">Desporto</button></a>
+            <a href="{% url 'artigos:artigos_tema' 'Política' %}"><button class="filtro-btn">Política</button></a>
+            <a href="{% url 'artigos:artigos_tema' 'Notícias do Mundo' %}"><button class="filtro-btn">Notícias do Mundo</button></a>
+        </div>
+
+
+        <button class="btn-1" onclick="window.history.back()">&#9664;</button>
+    </header>
+
+    {% block content %}
+    {% endblock %}
+
+    <footer>
+        <p class="txt-1">&copy; 2024 Rodigo Dias, Universidade Lusófona - Todos os direitos reservados.</p>
+    </footer>
+</body>
+</html>

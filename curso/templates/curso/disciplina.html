@@ -1,0 +1,22 @@
+{% extends "curso/layout.html" %}
+
+{% block content %}
+    <div class="content">
+        <h1>{{ disciplina.disciplina.nome }}</h1>
+        <div class="disciplina-info">
+            <p><strong>Ano:</strong> {{ disciplina.disciplina.ano }}º</p>
+            <p><strong>Semestre:</strong> {{ disciplina.disciplina.semestre }}</p>
+            <p><strong>ECTS:</strong> {{ disciplina.disciplina.ects }}</p>
+            <p><strong>Código Curricular:</strong> {{ disciplina.disciplina.curricularIUnitReadableCode }}</p>
+            <p><strong>Área Científica:</strong> {{ disciplina.disciplina.areaCientifica }}</p>
+            <p><strong>Docentes:</strong>
+            {% for docente in disciplina.disciplina.docentes.all %}
+                {{ docente }} {% if not forloop.last %}, {% endif %}
+            {% endfor %}
+            </p>
+        </div>
+        {% if disciplina.disciplina.projeto %}
+        <a href="{% url 'curso:projeto' disciplina.disciplina.nome disciplina.disciplina.projeto.nome %}" class="projeto-btn">Ver Projeto</a>
+        {% endif %}
+    </div>
+{% endblock %}

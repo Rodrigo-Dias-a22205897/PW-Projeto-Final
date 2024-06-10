@@ -1,0 +1,31 @@
+{% extends "curso/layout.html" %}
+
+{% block content %}
+    <div class="content">
+        {% if request.user.is_authenticated %}
+            Bem-vindo :  {{request.user.username}} - {{request.user.first_name}}
+            <br>
+            {% if is_member %}
+                <div class="grid-container">
+                    <div class="image">
+                        <a href="{% url 'curso:edit_cursos' %}"><button class="btn-novo">Edit - Cursos</button></a>
+                    </div>
+                    <div class="image">
+                        <a href="{% url 'curso:edit_disciplinas' %}"><button class="btn-novo">Edit - Disciplinas</button></a>
+                    </div>
+                    <div class="image">
+                        <a href="{% url 'curso:edit_projetos' %}"><button class="btn-novo">Edit - Projetos</button></a>
+                    </div>
+                    <div class="image">
+                        <a href="{% url 'curso:edit_docentes' %}"><button class="btn-novo">Edit - Docentes</button></a>
+                    </div>
+                </div>
+            {% else %}
+                Você não tem permissão para acessar este conteúdo.
+            {% endif %}
+
+        {% else %}
+            Ainda não iniciou sessão, porfavor faça-o para poder aceder ao conteúdo desta página
+        {% endif %}
+    </div>
+{% endblock %}

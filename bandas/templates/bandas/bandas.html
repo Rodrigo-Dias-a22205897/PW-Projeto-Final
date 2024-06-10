@@ -1,0 +1,58 @@
+{% extends "bandas/layout.html" %}
+
+
+{% block content %}
+    <style>
+        .lista {
+            position:absolute;
+            top:50%;
+            left:50%;
+            transform: translate(-50%,-50%);
+            width:50%;
+            text-align: center;
+        }
+
+        .titulo {
+            color: #1db954;
+            font-size: 24px;
+            margin-bottom: 20px;
+        }
+
+        .lista-bandas {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        .lista-bandas li {
+            width: 50%;
+            background-color: #121212;
+            padding: 10px;
+            border-radius: 5px;
+            margin: 7px auto;
+            color:white;
+        }
+
+        .lista-bandas li:hover{
+            background-color: #535353;
+            transform: scale(1.1);
+            cursor: pointer;
+        }
+
+        a{
+            text-decoration:none;
+        }
+    </style>
+
+    <div class="lista">
+        <h1 class="titulo">Bandas</h1>
+        <ul class="lista-bandas">
+            {% for banda in bandas %}
+                <a href="{% url 'bandas:banda' banda.nome %}">
+                    <li>{{ banda.nome }}</li>
+                </a>
+            {% endfor %}
+        </ul>
+    </div>
+{% endblock %}
+
+
